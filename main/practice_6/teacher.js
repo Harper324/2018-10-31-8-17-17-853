@@ -1,16 +1,18 @@
+import Person from './person'
+
 class Teacher extends Person {
     constructor(name, age, klass) {
-    super(name, age);
-    this.class = klass;
-}
-introduce() {
-    if (this.class) {
-        return super.introduce() + 'I am a Student. I teach Class ' + this.class;
-    } 
-    return super.introduce() + 'I am a Student. I teach no Class.';
-}
+        super(name, age);
+        this.klass = klass;
+    }
+    introduce() {
+        if (this.klass) {
+            return `${super.introduce()} I am a Teacher. I teach Class ${this.klass}.`;
+        }
+        return `${super.introduce()} I am a Teacher. I teach No Class.`;
+    }
 }
 
-
+module.exports = Teacher;
 
 

@@ -1,9 +1,11 @@
+import Person from './person'
 class Student extends Person {
-    constructor(name,age,class) {
-    super(name, age);
-    this.class = class;
+    constructor(name, age, klass) {
+        super(name, age);
+        this.klass = klass;
+    }
+    introduce() {
+        return `I am a Student. I am at Class ${this.klass}.`;
+    }
 }
-introduce(){
-    return 'I am a Student. I am at Class ' + this.class;
-}
-
+module.exports = Student;
